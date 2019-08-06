@@ -1,0 +1,207 @@
+/*Homepage*/
+#HomePage{
+    /* position:absolute; */
+    margin-top: 4.5%;
+}
+/*container that holds the image slider*/
+.HomePage_landingImage{
+    width: 100%;
+    height: 75vh;
+    text-align: center;
+    color: #fff;
+    position: relative;                
+}
+/*the div of the image slider*/
+.HomePage_landingImage .myImageSlides{
+    width:100%;
+    height: 100%;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s; 
+}
+/*the images in the slider*/
+.HomePage_landingImage .myImageSlides img{
+    width: 100%;
+    height: 100%;
+}
+
+/*the slide show animation for various broswers*/
+    @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+}
+/*ends*/
+/*section that appears above the image slider*/
+.HomePage_landingImage_Message{
+    position: absolute;
+    background-color:  rgba(128, 128, 128, 0.4);
+    padding: 5.5rem 0;
+    width: 50%;
+    margin: auto;
+    left: 25%;
+    top: 30%;
+    text-transform: uppercase;
+}
+
+.HomePage_landingImage_Message button{
+    width: 80%; 
+}
+
+/*products link section*/
+.Threecols-2rows{
+    display: grid;
+    grid-template-areas: "SqaureChair SquareOutdoor Rectangle"
+                         "SquareSofa SquareBeds Rectangle";
+    grid-gap: 2%;
+    grid-row-gap: 4%;
+    height: 100vh;
+    padding: 5rem 12rem;
+}
+
+.Threecols-2rows div{
+    background-size: cover;
+    background-position: center; 
+}
+
+.Threecols-2rows div a{
+    position: relative;
+    left: 36%;
+    top: 80%;
+}
+
+.squareBox{
+    width: 100%;
+    height: 100%;
+}
+
+.rectangleBox{
+    width: 100%;
+    height: 100%;
+}
+
+#lamps{
+    grid-area: Rectangle;
+    background-image: url("../Images/Lamps/blackLamp.jpg");
+}
+
+#lamps a{
+    top: 90.5%;
+}
+
+#chair{
+    grid-area: SqaureChair;
+    background-image: url("../Images/Chairs/smallWhiteLeather.jpg");
+}
+
+#outdoor{
+    grid-area: SquareOutdoor;
+    background-image: url("../Images/OutDoor/SwingCouch.jpg")
+}
+
+#sofa{
+    grid-area: SquareSofa;
+    background-image: url("../Images/Couchs/orangeSofa.jpg")
+}
+
+#beds{
+    grid-area: SquareBeds;
+    background-image: url("../Images/Beds/blackbed.jpg")
+}
+
+.greyButton{
+    background-color: grey;
+    position: relative;
+
+}
+/*ends*/
+
+/*gallery slider to display products*/
+.imageDisplayer{
+    width: 100%;
+    height: 30rem;
+    margin: 5rem 0;
+}
+
+
+.productSlider{
+    margin: 0 5rem;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.navigationArrow{
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 120px;
+    cursor: pointer;
+}
+
+#rightArrow{
+    right:10px;
+}
+
+.smallGallery{
+    height: 100%;
+    width: 45rem;
+    float: left;
+}
+
+/*Larger laptops responsive*/
+@media screen and (max-width: 1439px) and (min-width: 1024px){
+    .HomePage_landingImage_Message{
+        top:25%;
+    }
+
+    .Threecols-2rows{
+        padding: 5rem!important;
+    }
+
+    .Threecols-2rows div a {
+        left:30% !important;
+        top: 78% !important;
+    }
+
+    #lamps a{
+        top:89.5% !important;
+    }
+
+    #advert{
+        margin: 0 10%!important;
+    }
+
+     #advert button{
+        position:absolute!important;
+        top:50% !important;
+        left: 45%;
+    }
+
+    .smallGallery{
+        width: 31rem !important;
+    }
+}
+/*tablets*/
+@media screen and (max-width:768px) and (min-width:500px){
+    .HomePage_landingImage_Message{
+        margin-top: 0;
+    }
+
+    .Threecols-2rows{
+        display: grid;
+        grid-template-areas: "SqaureChair SquareOutdoor"
+                              "Rectangle Rectangle"  
+                             "SquareSofa SquareBeds";
+        grid-gap: 2%;
+        grid-row-gap: 4%;
+        grid-column-gap: 4%;
+        height: 100vh;
+        padding: 5rem 12rem;
+    }
+}

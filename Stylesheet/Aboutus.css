@@ -1,0 +1,21 @@
+/* #AboutUsPage{
+        
+} */
+
+#aboutUsImage{
+    background-image: url("../Images/aboutUsImage.jpg");
+    background-position: center;
+    background-size:cover; 
+    width: 100%;
+    height: 60rem;
+}
+
+#aboutUsImage span{
+    position: absolute;
+    width: 100%;
+    height: 5vh;
+    top:50%;
+    text-align: center;
+    background-color: navy;
+    font-size: 4rem;
+}

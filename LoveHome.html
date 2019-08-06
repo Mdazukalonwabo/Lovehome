@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Love Home</title>
+        <script type="text/javascript" src="../JavaScripts/Script.js"></script>
+        <link rel="icon" href="Images/logo.png" type="image/png">
+        <link rel="stylesheet" href="Stylesheet/style.css">
+        <link rel="stylesheet" href="Stylesheet/Home.css">
+    </head>
+    <Body>
+ <!--beginning of page-->       
+        <div class="Maincontainer">
+        <!-- navagition menu--> 
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="openBtn smallDevice">&#9776;</span>
+            <div id="Navigation">
+                <a href="javascript:void(0)" class="closebtn smallDevice" onclick="closeNav()">&times;</a>
+                <div class="TopMenu">
+                    <input type="text" name="txtSearch" id="searchbox">
+                    <a href="#searchbox" onclick="searchBox()"><img src="Images/SearchIcon.png" width="20px" height="20px"></a>
+                    <a href="Login.html">Login/Register</a>
+                </div>
+                <div class="MainMenu">
+                    <img src="Images/logo.png" alt="LoveHeartLogo" width="90rem">
+                    <ul id="navbar">
+                        <li><a href="Products.html">shop products</a></li>
+                        <li><a href="AboutUs.html">about us</a></li>
+                        <li><a href="ContactUs.html">contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--home page-->
+            <div id="HomePage" class="Page">
+                <!-- slider on the home page --> 
+                <div class="HomePage_landingImage">
+                   
+                    <div class="myImageSlides">
+                        <div class="HomePage_landingImage_Message">
+                            <h1>LOVE HOME</h1>
+                            <h3>Leaders in all your home and outdoor furniture</h3>
+                            <button class="blueButton button">view products</button>
+                        </div>
+                        <img src="Images/landingImages/greyChair.jpg">
+                    </div>
+                    <div class="myImageSlides">
+                        <div class="HomePage_landingImage_Message">
+                            <h1>LOVE HOME</h1>
+                            <h3>illuminate your home with one of our unique lamps</h3>
+                            <button class="blueButton button">view products</button>
+                        </div>
+                        <img src="Images/landingImages/chandelier.jpg">
+                    </div>
+                    <div class="myImageSlides">
+                        <div class="HomePage_landingImage_Message">
+                            <h1>LOVE HOME</h1>
+                            <h3>Create your own personal space and love living in it.</h3>
+                            <button class="blueButton button">view products</button>
+                        </div>   
+                        <img src="Images/landingImages/personCouple.jpg">
+                    </div>
+                    <div class="myImageSlides">
+                        <div class="HomePage_landingImage_Message">
+                            <h1>LOVE HOME</h1>
+                            <h3>family outting from the comfort of your home</h3>
+                            <button class="blueButton button">view products</button>
+                        </div>
+                        <img src="Images/landingImages/gardenSetting.jpg">
+                    </div>
+                    <div class="myImageSlides">
+                        <div class="HomePage_landingImage_Message">
+                            <h1>LOVE HOME</h1>
+                            <h3>luxury at affordable prices</h3>
+                            <button class="blueButton button">view products</button>
+                        </div>
+                        <img src="Images/landingImages/lounge.jpg">
+                    </div>                    
+                </div>
+                <!-- displayed Products-->
+                <div class="Threecols-2rows">
+                    <div class="squareBox" id="chair">
+                        <a href=""><button class="greyButton button">shop chairs</button></a>
+                    </div>
+                    <div class="squareBox" id="outdoor">
+                        <a href=""><button class="greyButton button">shop outdoors</button></a>
+                    </div>
+                    <div class="rectangleBox" id="lamps">
+                        <a href=""><button class="greyButton button">shop lamps</button></a>
+                    </div>
+                    <div class="squareBox" id="sofa">
+                        <a href=""><button class="greyButton button">shop sofas</button></a>
+                    </div>
+                    <div class="squareBox" id="beds">
+                        <a href=""><button class="greyButton button">shop beds</button></a>
+                    </div>
+                </div>
+                <!--advert section-->
+                <div id="advert">
+                    <h2>clearance sale, everything must go!</h2>
+                    <button class="blueButton button">Go to sale</button>
+                </div>
+                <!--product gallery slider-->
+                <div class="imageDisplayer">
+                    <div class="productSlider">
+                        <img src="Images/leftArrow.png" class="navigationArrow" id="leftArrow" onclick="plusDivs(-1)">
+                        <img src="Images/rightArrow.png" class="navigationArrow" id="rightArrow" onclick="plusDivs(1)">
+                        <img src="Images/Beds/QueenBed.jpg" class="smallGallery">
+                        <img src="Images/Chairs/redvelvetChair.jpg" class="smallGallery">
+                        <img src="Images/Lamps/creamLamp.jpg" class="smallGallery">
+                        <img src="Images/Outdoor/metalChairs.jpg" class="smallGallery">
+                        <img src="Images/Beds/QueenBed.jpg" class="smallGallery">
+                        <img src="Images/Chairs/redvelvetChair.jpg" class="smallGallery">
+                        <img src="Images/Lamps/creamLamp.jpg" class="smallGallery">
+                        <img src="Images/Outdoor/metalChairs.jpg" class="smallGallery">
+                    </div>    
+                </div>
+            </div>
+            <!--footer section-->
+            <div id="footer">
+                <div id="protection">
+                    <a href="#">TERMS AND CONDITIONS</a>
+                    <a href="#">PRIVACY POLICY</a>
+                </div>
+                <div id="paymentmethods">
+                    <ul>
+                        <li><img src="./Images/SERCURITY/mobicred_logo_for_white.png"></li>
+                        <li><img src="./Images/SERCURITY/PayU.png"></li>
+                        <li><img src="./Images/SERCURITY/MASTERCARD.png"></li>
+                        <li><img src="./Images/SERCURITY/Visa.png"></li>
+                    </ul>
+                </div>
+                <div id="socialmedia">
+                    <ul>
+                        <li><img src="./Images/socialMedia/gmail.png"></li>
+                        <li><img src="./Images/socialMedia/facebook.png"></li>
+                        <li><img src="./Images/socialMedia/twitter.png"></li>
+                        <li><img src="./Images/socialMedia/Instagram.png"></li>
+                    </ul>
+                    <p>Copyrights</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            //homepage landing image slider 
+            var myIndex = 0;
+            carousel();
+
+            function carousel(){
+                var i;
+                var x = document.getElementsByClassName("myImageSlides");
+                for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+                }
+
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 5500);
+            }
+            
+            //ends
+
+            //slider at the end of the page
+            // var slideIndex = 1;
+            // showDivs(slideIndex);
+
+            // function plusDivs(n) {
+            // showDivs(slideIndex += n);
+            // }
+
+            // function showDivs(n) {
+            // var i;
+            // var x = document.getElementsByClassName("smallGallery");
+            // if (n > x.length) {slideIndex = 1}
+            // if (n < 1) {slideIndex = x.length}
+            // for (i = 0; i < x.length; i++) {
+            // x[i].style.display = "none";  
+            // }
+            // x[slideIndex-1].style.display = "block";  
+            // }
+            //ends
+            //navigation stick
+            window.onscroll = function() {myFunction()};
+
+            var navbar = document.getElementById("Navigation");
+            var sticky = navbar.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } 
+                else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+
+            function openNav() {
+                document.getElementById("Navigation").style.width = "100vw";
+            }
+
+            function closeNav() {
+                document.getElementById("Navigation").style.width = "0";
+            }
+
+            function searchbox() {
+                document.getElementById("searchbox").style.width = "100px";
+            }
+        </script>
+    </Body>
+</html>

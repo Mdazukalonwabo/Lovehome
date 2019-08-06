@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Love Home</title>
+        <link rel="icon" href="Images/logo.png" type="image/png">
+        <link rel="stylesheet" href="Stylesheet/style.css">
+        <link rel="stylesheet" href="Stylesheet/Products.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <Body>
+        <div class="Maincontainer">
+            <!-- navagition menu--> 
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="openBtn smallDevice">&#9776;</span>
+            <div id="Navigation">
+                <a href="javascript:void(0)" class="closebtn smallDevice" onclick="closeNav()">&times;</a>
+                <div class="TopMenu">
+                    <input type="text" name="txtSearch" id="searchbox">
+                    <a href="searchbox"><img src="Images/SearchIcon.png" width="20px" height="20px"></a>
+                    <a href="Login.html">Login/Register</a>
+                </div>
+                <div class="MainMenu">
+                    <a href="LoveHome.html"><img src="Images/logo.png" alt="LoveHeartLogo" width="90rem"></a>
+                    <ul id="navbar">
+                        <li><a href="Products.html">shop products</a></li>
+                        <li><a href="AboutUs.html">about us</a></li>
+                        <li><a href="ContactUs.html">contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="CartContainer">
+                <div class="Cart">
+                    <h2>checkout form</h2>
+                    <form>
+                        <input type="text" placeholder="Name and Surname" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="tel" placeholder="Cellphone number" required>
+                        <input type="number" placeholder="ID Number" required>
+                        <input type="text" placeholder="House number">
+                        <input type="text"  placeholder="Street name">
+                        <input type="text" placeholder="Surburb and city">
+                        <input type="number" placeholder="Postal code">
+                    </form>
+                    <h3>Purchase summary</h3>
+                    <p>you will be contacted to finalize payment</p>
+                    <button class="blueButton button">Purchase</button>
+                </div>
+            </div>
+            <div id="ProductPage" class="Page">
+                <img src="Images/CART.png" id="shoppingCartIcon">
+                <div class="chairs threecols">
+                    <div id="redVelvet">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">small red valvet</h5>
+                            <span class="ProductPrice">R15 000 inc vat</span>
+                            <p>View full details</p>
+                            Ch001
+                        </div>
+                    </div>
+                    <div id="whitePlastic">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">white metalic</h5>
+                            <span class="ProductPrice">R12 000 inc vat</span>
+                            <p>View full details</p>
+                            Ch002
+                        </div>
+                    </div>
+                    <div id="whiteLeather">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">small leather</h5>
+                            <span class="ProductPrice">R35 000 inc vat</span>
+                            <p>View full details</p>
+                            Ch003
+                        </div>
+                    </div>
+                </div>
+                <div class="lamps threecols">
+                    <div id="creamStone">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">cream stone</h5>
+                            <span class="ProductPrice">R6 000 inc vat</span>
+                            <p>View full details</p>
+                            La001
+                        </div>
+                    </div>
+                    <div id="africaModern">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">african morden</h5>
+                            <span class="ProductPrice">R10 000 inc vat</span>
+                            <p>View full details</p>
+                            La002
+                        </div>
+                    </div>
+                    <div id="blueking">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">blue king</h5>
+                            <span class="ProductPrice">R9 000 inc vat</span>
+                            <p>View full details</p>
+                            La003
+                        </div>
+                    </div>
+                </div>
+                <div class="sofas threecols">
+                    <div id="grey2Seater">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">2 seat grey</h5>
+                            <span class="ProductPrice">R25 000 inc vat</span>
+                            <p>View full details</p>
+                            So001
+                        </div>
+                    </div>
+                    <div id="black2Piece">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">black leather</h5>
+                            <span class="ProductPrice">R75 000 inc vat</span>
+                            <p>View full details</p>
+                            So002
+                        </div>
+                    </div>
+                    <div id="orangeleather">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">four seater orange</h5>
+                            <span class="ProductPrice">R15 000 inc vat</span>
+                            <p>View full details</p>
+                            So003
+                        </div>
+                    </div>
+                </div>
+                <div class="outdoorfurniture threecols">                        
+                    <div id="familyTable">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">pinewood family table</h5>
+                            <span class="ProductPrice">R45 000 inc vat</span>
+                            <p>View full details</p>
+                            Ou001
+                        </div>
+                    </div>
+                    <div id="customBench">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">brown custom bench</h5>
+                            <span class="ProductPrice">R35 000 inc vat</span>
+                            <p>View full details</p>
+                            Ou002
+                        </div>
+                    </div>
+                    <div id="swingCouch">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">custom sofa swing</h5>
+                            <span class="ProductPrice">R75 000 inc vat</span>
+                            <p>View full details</p>
+                            Ou003
+                        </div>
+                    </div>
+                </div>
+                <!--advert section-->
+                <div id="advert">
+                    <h2>clearance sale, everything must go!</h2>
+                    <button class="blueButton button">Go to sale</button>
+                </div>
+                <div class="beds threecols">
+                    <div id="whiteLeather">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">black leather queen</h5>
+                            <span class="ProductPrice">R55 000 inc vat</span>
+                            <p>View full details</p>
+                            Be001
+                        </div>
+                    </div>
+                    <div id="blackLeather">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">king sweet black leather</h5>
+                            <span class="ProductPrice">R105 000 inc vat</span>
+                            <p>View full details</p>
+                            Be002
+                        </div>
+                    </div>
+                    <div id="itailainComfort">
+                        <div class="ProductDetailSnippet">
+                            <h5 class="ProductName">white italian comfort</h5>
+                            <span class="ProductPrice">R95 000 inc vat</span>
+                            <p>View full details</p>
+                            Be003
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="footer">
+                <div id="protection">
+                    <a href="#">TERMS AND CONDITIONS</a>
+                    <a href="#">PRIVACY POLICY</a>
+                </div>
+                <div id="paymentmethods">
+                    <ul>
+                        <li><img src="./Images/SERCURITY/mobicred_logo_for_white.png"></li>
+                        <li><img src="./Images/SERCURITY/PayU.png"></li>
+                        <li><img src="./Images/SERCURITY/MASTERCARD.png"></li>
+                        <li><img src="./Images/SERCURITY/Visa.png"></li>
+                    </ul>
+                </div>
+                <div id="socialmedia">
+                    <ul>
+                        <li><img src="./Images/socialMedia/gmail.png"></li>
+                        <li><img src="./Images/socialMedia/facebook.png"></li>
+                        <li><img src="./Images/socialMedia/twitter.png"></li>
+                        <li><img src="./Images/socialMedia/Instagram.png"></li>
+                    </ul>
+                    <p>Copyrights</p>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            $(".threecols div").hover(function(){
+                $(".ProductDetailSnippet").slideDown("slow");
+            });
+            $(document).hover(function(){
+  	            $(".ProductDetailSnippet").slideUp("slow");
+            });
+
+            var Cart = document.getElementById("shoppingCartIcon");
+
+            Cart.onclick = function() { displayCart() };
+            
+            function displayCart(){
+                var x = document.getElementById("CartContainer");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } 
+                else {
+                    x.style.display = "none";
+                }
+            };
+
+            let chairs = [
+                {ProuctName : "small red valvet", ProductCode : "Ch001", ProductPrice : "R15 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+                {ProuctName : "white metalic", ProductCode : "Ch002", ProductPrice : "R12 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+                {ProuctName : "small leather", ProductCode : "Ch003", ProductPrice : "R35 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+            ];
+
+            let lamps = [
+                {ProuctName : "cream stone", ProductCode : "La001", ProductPrice : "R6 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+                {ProuctName : "african morden", ProductCode : "La002", ProductPrice : "R10 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+                {ProuctName : "blue king", ProductCode : "La003", ProductPrice : "R9 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+            ];
+
+            let sofa =[
+                {ProuctName : "2 seat grey", ProductCode : "So001", ProductPrice : "R25 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+                {ProuctName : "black leather", ProductCode : "Sa002", ProductPrice : "R75 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+                {ProuctName : "four seater orange", ProductCode : "So003", ProductPrice : "R15 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+            ];
+
+            let outside = [
+                {ProuctName : "pinewood family table", ProductCode : "Ou001", ProductPrice : "R45 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+                {ProuctName : "brown custom bench", ProductCode : "Ou002", ProductPrice : "R35 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+                {ProuctName : "custom sofa swing", ProductCode : "Ou003", ProductPrice : "R75 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+            ];
+
+            let beds = [
+                {ProuctName : "black leather queen", ProductCode : "Be001", ProductPrice : "R55 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+                {ProuctName : "king sweet black leather", ProductCode : "Be002", ProductPrice : "R105 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+                {ProuctName : "white italian comfort", ProductCode : "Be003", ProductPrice : "R95 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
+            ];
+        </script>
+    </Body>
+</html>

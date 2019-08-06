@@ -1,0 +1,223 @@
+#ProductPage{
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    width: 100%;
+    margin-top: 8%;
+    /* position: absolute; */
+}
+
+#shoppingCartIcon{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    right: 8px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#ProductPage .threecols{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4rem;
+    height: 47rem;
+    /* width: 47rem; */
+    padding: 2rem 5rem;
+}
+
+.threecols div{
+    background-position: center;
+    background-size: cover;
+}
+
+.chairs #redVelvet{
+    background-image: url("../Images/Chairs/redvelvetChair.jpg");
+}
+
+.chairs #whitePlastic{
+    background-image: url("../Images/Chairs/whitePlasticChair.jpg");
+}
+
+.chairs #whiteLeather{
+    background-image: url("../Images/Chairs/smallWhiteLeather.jpg");
+}
+
+.lamps #creamStone{
+    background-image: url("../Images/Lamps/creamLamp.jpg");
+}
+
+.lamps #africaModern{
+    background-image: url("../Images/Lamps/tallLamp.jpg");
+}
+
+.lamps #blueking{
+    background-image: url("../Images/Lamps/navyLamp.png");
+}
+
+.sofas #grey2Seater{
+    background-image: url("../Images/Couchs/grey.jpg");
+}
+
+.sofas #black2Piece{
+    background-image: url("../Images/Couchs/leatehrblack.jpg");
+}
+
+.sofas #orangeleather{
+    background-image: url("../Images/Couchs/orangeSofa.jpg");
+}
+
+.outdoorfurniture #familyTable{
+    background-image: url("../Images/Outdoor/table.jpg");
+}
+
+.outdoorfurniture #customBench{
+    background-image: url("../Images/Outdoor/woodernBench.jpg");
+}
+
+.outdoorfurniture #swingCouch{
+    background-image: url("../Images/Outdoor/SwingCouch.jpg");
+}
+
+.beds #whiteLeather{
+    background-image: url("../Images/Beds/LeatherBed.jpg");
+}
+
+.beds #blackLeather{
+    background-image: url("../Images/Beds/blackbed.jpg");
+}
+
+.beds #itailainComfort{
+    background-image: url("../Images/Beds/italianBed.jpg");
+}
+
+.ProductDetailSnippet{
+    background-color:  rgba(128, 128, 128, 0.6);
+    height: 100px !important;
+    position: relative;;
+    top: 370px;
+    width: 57.4rem !important;
+    padding: 0px !important;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    display: none; 
+}
+
+#CartContainer{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.8);
+    display: none;
+}
+
+#CartContainer .Cart {
+   padding: 100px;
+   text-transform: uppercase; 
+}
+
+#CartContainer .Cart form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+    grid-row-gap: 4%;
+    margin-bottom: 25px;
+}
+
+#CartContainer .Cart h2{
+    text-transform: uppercase;
+    color: orange;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+#CartContainer .Cart h3{
+    text-transform: uppercase;
+    color: orange;
+}
+
+#CartContainer .Cart p{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+#CartContainer .Cart button{
+    text-align: center
+}
+
+.ProductDetailSnippet .ProductName{
+    padding-top: 15px;
+    font-size: 25px;
+    
+}
+
+.ProductDetailSnippet .ProductPrice{
+    text-transform: capitalize
+}
+/*cart*/
+
+/*end of the cart*/
+#footer{
+    margin-top: 50px;
+}
+
+/*screens with a screen size less than 1740 and bigger that 1440*/
+@media screen and (max-width:1740px) and (min-width: 1440px){
+
+}
+
+/*screens with a screen size less than 1439*/
+@media screen and (max-width: 1439px) and (min-width: 1024px)  {
+    #ProductPage div{
+        height: 40rem!important;
+    }
+
+    #CartContainer{
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(128, 128, 128, 0.8);
+        display: none;
+    }
+    
+    .Cart {
+       padding: 100px;
+       text-transform: uppercase; 
+    }
+    
+    .Cart form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 2%;
+        grid-row-gap: 4%;
+        margin-bottom: 25px;
+    }
+    
+    .Cart h2{
+        text-transform: uppercase;
+        color: orange;
+        text-decoration: underline;
+        margin-bottom: 20px;
+    }
+    
+    .Cart h3{
+        text-transform: uppercase;
+        color: orange;
+    }
+    
+    .Cart p{
+        color: white;
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    .Cart button{
+        text-align: center
+    }
+}

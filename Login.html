@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Love Home</title>
+        <link rel="icon" href="Images/logo.png" type="image/png">
+        <link rel="stylesheet" href="Stylesheet/style.css">
+        <link rel="stylesheet" href="Stylesheet/Register.css">
+    </head>
+    <Body>
+        <div class="Maincontainer">
+            <!-- navagition menu--> 
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="openBtn smallDevice">&#9776;</span>
+            <div id="Navigation">
+                <a href="javascript:void(0)" class="closebtn smallDevice" onclick="closeNav()">&times;</a>
+                <div class="TopMenu">
+                    <input type="text" name="txtSearch" id="searchbox">
+                    <a href="searchbox"><img src="Images/SearchIcon.png" width="20px" height="20px"></a>
+                    <a href="Login.html">Login/Register</a>
+                </div>
+                <div class="MainMenu">
+                    <a href="LoveHome.html"><img src="Images/logo.png" alt="LoveHeartLogo" width="90rem"></a>
+                    <ul id="navbar">
+                        <li><a href="Products.html">shop products</a></li>
+                        <li><a href="AboutUs.html">about us</a></li>
+                        <li><a href="ContactUs.html">contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="RegistrationPage" class="Page">
+                <div class="PageContainer">
+                    <div class="form">
+                        <form class="Login">
+                            <input type="email" placeholder="USERNAME" required>
+                            <input type="password" placeholder="PASSWORD" required>
+                            <p id="message">NOT REGISTRATED? <a href="#Registration" class="link">Register</a></p>
+                            <button class="button blueButton">LOGIN</button>
+                        </form>
+                        <form class="Registration">
+                            <input type="text" placeholder="USERNAME" required>
+                            <input type="email" placeholder="E-MAIL ID" required>
+                            <input type="password" placeholder="PASSWORD" required>
+                            <input type="password" placeholder="CONFIRM PASSWORD" required>
+                            <input type="text" placeholder="RECOVERY QUESTION" required>
+                            <input type="text" placeholder="ANSWER" required>
+                            <p id="message">ALREADY HAVE AN ACCOUNT? <a href="#Login" class="link">Login</a></p>
+                            <button class="button blueButton">CREATE</button>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+        //smooth transition from reg and login form 
+        var form = document.getElementsByClassName(".form");
+
+            $(".link").click(function(){
+                $('form').animate({height:"toggle", opacity:"toggle"}, "slow");
+                form.animate({height:"toggle", opacity:"toggle"}, "slow");
+            });        
+        </script>
+    </Body>
+</html>

@@ -1,0 +1,29 @@
+/*registration page*/
+#RegistrationPage{
+    height: 80vh;
+    background-image: url("../Images/backgroundLoginReg.jpg");
+    background-position: center;
+    background-size: cover;
+    padding-top: 10%;
+}
+
+/*container of the registration page*/
+.PageContainer{
+    width: 50%;
+    margin: auto;
+    background-color: rgba(69, 120, 128, 0.5);
+}
+
+/*message within the form*/
+form .message{
+    color: #fff;
+    font: 1.2rem;
+}
+/*registration form*/
+.Registration{
+    display: none;
+}
+/*link within the forms*/
+.link{
+    color: #f9812a;
+}
