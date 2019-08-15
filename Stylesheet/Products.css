@@ -29,63 +29,63 @@
     background-size: cover;
 }
 
-.chairs #redVelvet{
+#chairs #redVelvet{
     background-image: url("../Images/Chairs/redvelvetChair.jpg");
 }
 
-.chairs #whitePlastic{
+#chairs #whitePlastic{
     background-image: url("../Images/Chairs/whitePlasticChair.jpg");
 }
 
-.chairs #whiteLeather{
+#chairs #whiteLeather{
     background-image: url("../Images/Chairs/smallWhiteLeather.jpg");
 }
 
-.lamps #creamStone{
+#lamps #creamStone{
     background-image: url("../Images/Lamps/creamLamp.jpg");
 }
 
-.lamps #africaModern{
+#lamps #africaModern{
     background-image: url("../Images/Lamps/tallLamp.jpg");
 }
 
-.lamps #blueking{
+#lamps #blueking{
     background-image: url("../Images/Lamps/navyLamp.png");
 }
 
-.sofas #grey2Seater{
+#sofas #grey2Seater{
     background-image: url("../Images/Couchs/grey.jpg");
 }
 
-.sofas #black2Piece{
+#sofas #black2Piece{
     background-image: url("../Images/Couchs/leatehrblack.jpg");
 }
 
-.sofas #orangeleather{
+#sofas #orangeleather{
     background-image: url("../Images/Couchs/orangeSofa.jpg");
 }
 
-.outdoorfurniture #familyTable{
+#outdoorfurniture #familyTable{
     background-image: url("../Images/Outdoor/table.jpg");
 }
 
-.outdoorfurniture #customBench{
+#outdoorfurniture #customBench{
     background-image: url("../Images/Outdoor/woodernBench.jpg");
 }
 
-.outdoorfurniture #swingCouch{
+#outdoorfurniture #swingCouch{
     background-image: url("../Images/Outdoor/SwingCouch.jpg");
 }
 
-.beds #whiteLeather{
+#beds #whiteQueenLeather{
     background-image: url("../Images/Beds/LeatherBed.jpg");
 }
 
-.beds #blackLeather{
+#beds #blackLeather{
     background-image: url("../Images/Beds/blackbed.jpg");
 }
 
-.beds #itailainComfort{
+#beds #itailainComfort{
     background-image: url("../Images/Beds/italianBed.jpg");
 }
 
@@ -94,7 +94,7 @@
     height: 100px !important;
     position: relative;;
     top: 370px;
-    width: 57.4rem !important;
+    /*width: 57.4rem !important;*/
     padding: 0px !important;
     text-align: center;
     color: white;
@@ -159,7 +159,52 @@
 }
 /*cart*/
 
+
+
+
 /*end of the cart*/
+/*display the single selected item*/
+    #itemDisplayer{
+        position: fixed;
+        background-color: rgba(128, 128, 128, 0.8);
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+        top: 0;
+        display: none;
+    }
+
+    .close {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        width: 32px;
+        height: 32px;
+        opacity: 0.5;
+    }
+
+    .close:hover {
+        opacity: 1;
+    }
+
+    .close:before, .close:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 33px;
+        width: 2px;
+        background-color: #333;
+    }
+
+    .close:before {
+        transform: rotate(45deg);
+    }
+     
+    .close:after {
+        transform: rotate(-45deg);
+    }
+
+
 #footer{
     margin-top: 50px;
 }
@@ -219,5 +264,27 @@
     
     .Cart button{
         text-align: center
+    }
+}
+
+@media screen and (max-width: 1024px){
+    #ProductPage{
+        grid-template-rows: none;
+    }
+    
+    #ProductPage .threecols{
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-template-rows: repeat(3, 1fr);
+        grid-row-gap: 4rem;
+        height: 200rem;
+    }
+
+    .ProductDetailSnippet{
+        top:540px;
+    }
+
+    #advert{
+        margin: 2rem 1rem;
     }
 }

@@ -1,6 +1,7 @@
-/* #AboutUsPage{
-        
-} */
+#AboutUsPage{
+    margin-top: 7%;
+    font-size: 2rem;     
+}
 
 #aboutUsImage{
     background-image: url("../Images/aboutUsImage.jpg");
@@ -8,14 +9,25 @@
     background-size:cover; 
     width: 100%;
     height: 60rem;
+    margin-top: 3%;
 }
 
 #aboutUsImage span{
     position: absolute;
     width: 100%;
-    height: 5vh;
-    top:50%;
+    top:105%;
     text-align: center;
-    background-color: navy;
+    background-color: rgba(128, 128, 128, 0.4);
     font-size: 4rem;
+    color: #fff;
+    margin: 0!important;
+}
+
+h2{
+    margin: 2% 2% 0 2%; 
+    color: #ff6b00;
+}
+
+#AboutUsPage p, span{
+    margin: 2%;
 }

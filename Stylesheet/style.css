@@ -307,5 +307,11 @@ form button::after, form button:hover{
             right: 25px;
             font-size: 36px;
             margin-left: 50px;
-          }
+        }
+
+        #footer{
+            grid-template-columns: none;
+            min-height: 30vh;
+            max-height: 50vh;
+        }
     }

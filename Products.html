@@ -41,13 +41,22 @@
                         <input type="number" placeholder="Postal code">
                     </form>
                     <h3>Purchase summary</h3>
+                    <div class="displayCartContent">
+
+                    </div>
                     <p>you will be contacted to finalize payment</p>
                     <button class="blueButton button">Purchase</button>
                 </div>
             </div>
+            <div id="itemDisplayer">
+                <a href="#" class="close"></a>
+                <div class="itemSummary" id="itemSummary">
+                    
+                </div>
+            </div>
             <div id="ProductPage" class="Page">
                 <img src="Images/CART.png" id="shoppingCartIcon">
-                <div class="chairs threecols">
+                <div class="threecols" id="chairs">
                     <div id="redVelvet">
                         <div class="ProductDetailSnippet">
                             <h5 class="ProductName">small red valvet</h5>
@@ -73,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="lamps threecols">
+                <div class="threecols" id="lamps">
                     <div id="creamStone">
                         <div class="ProductDetailSnippet">
                             <h5 class="ProductName">cream stone</h5>
@@ -99,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="sofas threecols">
+                <div class="threecols" id="sofas">
                     <div id="grey2Seater">
                         <div class="ProductDetailSnippet">
                             <h5 class="ProductName">2 seat grey</h5>
@@ -125,7 +134,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="outdoorfurniture threecols">                        
+                <div class="threecols" id="outdoorfurniture">                        
                     <div id="familyTable">
                         <div class="ProductDetailSnippet">
                             <h5 class="ProductName">pinewood family table</h5>
@@ -156,8 +165,8 @@
                     <h2>clearance sale, everything must go!</h2>
                     <button class="blueButton button">Go to sale</button>
                 </div>
-                <div class="beds threecols">
-                    <div id="whiteLeather">
+                <div class="threecols" id="beds">
+                    <div id="whiteQueenLeather">
                         <div class="ProductDetailSnippet">
                             <h5 class="ProductName">black leather queen</h5>
                             <span class="ProductPrice">R55 000 inc vat</span>
@@ -209,18 +218,23 @@
             </div>
         </div>
         <script>
-
+            var displayDiv = document.getElementsByClassName("displayCartContent");
+            //small description of the product is shown on hover 
             $(".threecols div").hover(function(){
                 $(".ProductDetailSnippet").slideDown("slow");
             });
             $(document).hover(function(){
   	            $(".ProductDetailSnippet").slideUp("slow");
             });
-
+            //opening and closing of the cart 
             var Cart = document.getElementById("shoppingCartIcon");
-
+            var item = document.getElementById("itemDisplayer");
             Cart.onclick = function() { displayCart() };
-            
+
+            $(".close").click(function(){
+                item.style.display = "none";
+            });
+           
             function displayCart(){
                 var x = document.getElementById("CartContainer");
                 if (x.style.display === "none") {
@@ -230,6 +244,10 @@
                     x.style.display = "none";
                 }
             };
+            //display the item selected with its full description
+            $(".threecols div").click(function(){
+                item.style.display = "block";
+            });
 
             let chairs = [
                 {ProuctName : "small red valvet", ProductCode : "Ch001", ProductPrice : "R15 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
