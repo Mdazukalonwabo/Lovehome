@@ -239,9 +239,13 @@
                 var x = document.getElementById("CartContainer");
                 if (x.style.display === "none") {
                     x.style.display = "block";
+                    if(item.style.display == "block" ){
+                        item.style.display = "none";
+                    }
                 } 
                 else {
                     x.style.display = "none";
+                    
                 }
             };
             //display the item selected with its full description

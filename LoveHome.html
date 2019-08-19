@@ -102,7 +102,7 @@
                     <div class="productSlider">
                         <img src="Images/leftArrow.png" class="navigationArrow" id="leftArrow" onclick="plusDivs(-1)">
                         <img src="Images/rightArrow.png" class="navigationArrow" id="rightArrow" onclick="plusDivs(1)">
-                        <img src="Images/Beds/QueenBed.jpg" class="smallGallery">
+                        <img src="Images/Beds/QueenBed.jpg" class="smallGallery" id="test">
                         <img src="Images/Chairs/redvelvetChair.jpg" class="smallGallery">
                         <img src="Images/Lamps/creamLamp.jpg" class="smallGallery">
                         <img src="Images/Outdoor/metalChairs.jpg" class="smallGallery">
@@ -110,9 +110,14 @@
                         <img src="Images/Chairs/redvelvetChair.jpg" class="smallGallery">
                         <img src="Images/Lamps/creamLamp.jpg" class="smallGallery">
                         <img src="Images/Outdoor/metalChairs.jpg" class="smallGallery">
-                    </div>    
+                    </div>
+                       
                 </div>
             </div>
+            <div id="lightBox" class="modal">
+                <span class="close"></span>
+                <img class="lightBox-image" id="img01">
+            </div> 
             <!--footer section-->
             <div id="footer">
                 <div id="protection">
@@ -139,6 +144,23 @@
             </div>
         </div>
         <script>
+            var modal = document.getElementById("lightBox");
+            var modalImg = document.getElementById("img01");
+            var smallGalleryimages = document.getElementsByClassName("smallGallery");
+
+            for(var l = 0; l<smallGalleryimages.length; l++){
+                smallGalleryimages[l].onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                }
+            }
+
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+
+
             //homepage landing image slider 
             var myIndex = 0;
             carousel();
