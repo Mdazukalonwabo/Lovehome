@@ -3,7 +3,6 @@
     grid-template-rows: repeat(6, 1fr);
     width: 100%;
     margin-top: 8%;
-    /* position: absolute; */
 }
 
 #shoppingCartIcon{
@@ -20,11 +19,10 @@
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 4rem;
     height: 47rem;
-    /* width: 47rem; */
     padding: 2rem 5rem;
 }
 
-.threecols div{
+.threecols div, .itemSummary #selectedImage{
     background-position: center;
     background-size: cover;
     cursor: pointer;
@@ -87,6 +85,34 @@
 
 #CartContainer .Cart button{
     text-align: center
+}
+
+.itemSummary {
+    height: 80vh;
+    margin: 5%;
+}
+
+.itemSummary .selected_item_container{
+    display: grid;
+    grid-template-areas: "image image details";
+    grid-gap: 5%;
+    height: 100%;
+}
+
+.itemSummary #selectedImage{
+    grid-area: image;
+    width: 100%;
+    height: 100%;
+    cursor: none;
+}
+
+.itemSummary .content_holder{
+    grid-area: details;
+}
+
+#addToCartButton{
+    width:150px;
+    height: 150px;
 }
 
 .ProductDetailSnippet .ProductName{

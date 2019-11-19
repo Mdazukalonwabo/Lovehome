@@ -1,10 +1,11 @@
+var addedToCart = []
 var displayDiv = document.getElementsByClassName("displayCartContent");
 
 
 //opening and closing of the cart 
-var Cart = document.getElementById("shoppingCartIcon");
+var CartIcon = document.getElementById("shoppingCartIcon");
 var item = document.getElementById("itemDisplayer");
-Cart.onclick = function() { displayCart() };
+CartIcon.onclick = function() { displayCart() };
 
 $(".close").click(function(){ item.style.display = "none"; });
 
@@ -48,8 +49,30 @@ function getItemId(clicked_id){
         item.style.display = "block";
         const itemDisplay = document.getElementById('itemSummary');
         var selectedItem = SearchInventory(clicked_id)
-        itemDisplay.innerHTML = "<div>"+selectedItem.ProuctName+"</div>"
+        itemDisplay.innerHTML = "<div class='selected_item_container'>"
+                                    +"<div id='selectedImage'></div>"
+                                    +"<div class='content_holder'>"
+                                        +"<h1>"+selectedItem.ProuctName+"</h1>"
+                                        +"<h3>Description</h3>"
+                                        +"<p>"+selectedItem.ProductDescription+"</p>"
+                                        +createButton(itemDisplay)
+                                    +"</div>"
+                                +"</div>"
+        document.getElementById('selectedImage').style.backgroundImage = "url("+selectedItem.backgroundImage+")";
     });
+
+    function createButton(context) {
+        var button = document.createElement("input");
+        button.type = "button";
+        button.value = "im a button";
+        context.appendChild(button);
+    }
+
+    function addItemToCart(itemToAdd){
+        addedToCart.push(SearchInventory(itemToAdd))
+        console.log(addedToCart)
+    }
+
     // search the inventory for specific code
     function SearchInventory(skucode){
         var x = 0
@@ -61,8 +84,6 @@ function getItemId(clicked_id){
         }
     }
 }
-
-
 
 var inventory = [
     chairs = [
