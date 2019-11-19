@@ -29,24 +29,40 @@ function displayInventory(){
     contentDivs = [chairsId, lampsId, sofasId, outdoorfurnitureId, bedsId]
     for(var i = 0; i<inventory.length;i++){
         inventory[i].forEach(function(details){
-            contentDivs[i].innerHTML += "<div id="+details.divId+">"
+            contentDivs[i].innerHTML += "<div id="+details.divId+" onclick='getItemId(this.id)'>"
                 +"<div class='ProductDetailSnippet'>"
                 +"<h5 class='ProductName'>"+details.ProuctName+"</h5>"
                 +"<span class='ProductPrice'>R"+details.ProductPrice +"inc vat</span>"
                 +"<p>View full details</p>"+details.ProductCode+"</div>"
                 document.getElementById(details.divId).style.backgroundImage = "url("+details.backgroundImage+")";
-    })};
-
+        })
+    };
     //small description of the product is shown on hover 
     $(".threecols div").hover(function(){$(".ProductDetailSnippet").slideDown("slow");});
     $(document).hover(function(){ $(".ProductDetailSnippet").slideUp("slow"); });
+};
 
-    //display the item selected with its full description
+//display the selected item in its own page with full details and information about it
+function getItemId(clicked_id){
     $(".threecols div").click(function(){
         item.style.display = "block";
-        itemDisplay = document.getElementById('itemSummary');
+        const itemDisplay = document.getElementById('itemSummary');
+        var selectedItem = SearchInventory(clicked_id)
+        itemDisplay.innerHTML = "<div>"+selectedItem.ProuctName+"</div>"
     });
+    // search the inventory for specific code
+    function SearchInventory(skucode){
+        var x = 0
+        while(x<inventory.length){
+            if(inventory[x].find(inventory => inventory.divId === skucode)){
+                return inventory[x].find(inventory => inventory.divId === skucode)
+            }
+            x++;
+        }
+    }
 }
+
+
 
 var inventory = [
     chairs = [
