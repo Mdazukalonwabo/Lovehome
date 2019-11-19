@@ -57,33 +57,9 @@
             <div id="ProductPage" class="Page">
                 <img src="Images/CART.png" id="shoppingCartIcon">
                 <div class="threecols" id="chairs">
-                    <div id="redVelvet">
-                        <div class="ProductDetailSnippet">
-                            <h5 class="ProductName">small red valvet</h5>
-                            <span class="ProductPrice">R15 000 inc vat</span>
-                            <p>View full details</p>
-                            Ch001
-                        </div>
-                    </div>
-                    <div id="whitePlastic">
-                        <div class="ProductDetailSnippet">
-                            <h5 class="ProductName">white metalic</h5>
-                            <span class="ProductPrice">R12 000 inc vat</span>
-                            <p>View full details</p>
-                            Ch002
-                        </div>
-                    </div>
-                    <div id="whiteLeather">
-                        <div class="ProductDetailSnippet">
-                            <h5 class="ProductName">small leather</h5>
-                            <span class="ProductPrice">R35 000 inc vat</span>
-                            <p>View full details</p>
-                            Ch003
-                        </div>
-                    </div>
                 </div>
                 <div class="threecols" id="lamps">
-                    <div id="creamStone">
+                    <!-- <div id="creamStone">
                         <div class="ProductDetailSnippet">
                             <h5 class="ProductName">cream stone</h5>
                             <span class="ProductPrice">R6 000 inc vat</span>
@@ -106,10 +82,10 @@
                             <p>View full details</p>
                             La003
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="threecols" id="sofas">
-                    <div id="grey2Seater">
+                    <!-- <div id="grey2Seater">
                         <div class="ProductDetailSnippet">
                             <h5 class="ProductName">2 seat grey</h5>
                             <span class="ProductPrice">R25 000 inc vat</span>
@@ -132,10 +108,10 @@
                             <p>View full details</p>
                             So003
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="threecols" id="outdoorfurniture">                        
-                    <div id="familyTable">
+                    <!-- <div id="familyTable">
                         <div class="ProductDetailSnippet">
                             <h5 class="ProductName">pinewood family table</h5>
                             <span class="ProductPrice">R45 000 inc vat</span>
@@ -158,7 +134,7 @@
                             <p>View full details</p>
                             Ou003
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <!--advert section-->
                 <div id="advert">
@@ -166,7 +142,7 @@
                     <button class="blueButton button">Go to sale</button>
                 </div>
                 <div class="threecols" id="beds">
-                    <div id="whiteQueenLeather">
+                    <!-- <div id="whiteQueenLeather">
                         <div class="ProductDetailSnippet">
                             <h5 class="ProductName">black leather queen</h5>
                             <span class="ProductPrice">R55 000 inc vat</span>
@@ -189,7 +165,7 @@
                             <p>View full details</p>
                             Be003
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             
@@ -217,71 +193,7 @@
                 </div>
             </div>
         </div>
-        <script>
-            var displayDiv = document.getElementsByClassName("displayCartContent");
-            //small description of the product is shown on hover 
-            $(".threecols div").hover(function(){
-                $(".ProductDetailSnippet").slideDown("slow");
-            });
-            $(document).hover(function(){
-  	            $(".ProductDetailSnippet").slideUp("slow");
-            });
-            //opening and closing of the cart 
-            var Cart = document.getElementById("shoppingCartIcon");
-            var item = document.getElementById("itemDisplayer");
-            Cart.onclick = function() { displayCart() };
-
-            $(".close").click(function(){
-                item.style.display = "none";
-            });
-           
-            function displayCart(){
-                var x = document.getElementById("CartContainer");
-                if (x.style.display === "none") {
-                    x.style.display = "block";
-                    if(item.style.display == "block" ){
-                        item.style.display = "none";
-                    }
-                } 
-                else {
-                    x.style.display = "none";
-                    
-                }
-            };
-            //display the item selected with its full description
-            $(".threecols div").click(function(){
-                item.style.display = "block";
-            });
-
-            let chairs = [
-                {ProuctName : "small red valvet", ProductCode : "Ch001", ProductPrice : "R15 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-                {ProuctName : "white metalic", ProductCode : "Ch002", ProductPrice : "R12 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-                {ProuctName : "small leather", ProductCode : "Ch003", ProductPrice : "R35 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-            ];
-
-            let lamps = [
-                {ProuctName : "cream stone", ProductCode : "La001", ProductPrice : "R6 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-                {ProuctName : "african morden", ProductCode : "La002", ProductPrice : "R10 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-                {ProuctName : "blue king", ProductCode : "La003", ProductPrice : "R9 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-            ];
-
-            let sofa =[
-                {ProuctName : "2 seat grey", ProductCode : "So001", ProductPrice : "R25 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-                {ProuctName : "black leather", ProductCode : "Sa002", ProductPrice : "R75 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-                {ProuctName : "four seater orange", ProductCode : "So003", ProductPrice : "R15 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-            ];
-
-            let outside = [
-                {ProuctName : "pinewood family table", ProductCode : "Ou001", ProductPrice : "R45 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-                {ProuctName : "brown custom bench", ProductCode : "Ou002", ProductPrice : "R35 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-                {ProuctName : "custom sofa swing", ProductCode : "Ou003", ProductPrice : "R75 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-            ];
-
-            let beds = [
-                {ProuctName : "black leather queen", ProductCode : "Be001", ProductPrice : "R55 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-                {ProuctName : "king sweet black leather", ProductCode : "Be002", ProductPrice : "R105 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-                {ProuctName : "white italian comfort", ProductCode : "Be003", ProductPrice : "R95 000", ProductDescription : "dsijdfsdjfojsdfpoj"},
-            ];
+        <script src='JavaScripts\products.js'>
         </script>
     </Body>
 </html>

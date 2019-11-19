@@ -27,66 +27,7 @@
 .threecols div{
     background-position: center;
     background-size: cover;
-}
-
-#chairs #redVelvet{
-    background-image: url("../Images/Chairs/redvelvetChair.jpg");
-}
-
-#chairs #whitePlastic{
-    background-image: url("../Images/Chairs/whitePlasticChair.jpg");
-}
-
-#chairs #whiteLeather{
-    background-image: url("../Images/Chairs/smallWhiteLeather.jpg");
-}
-
-#lamps #creamStone{
-    background-image: url("../Images/Lamps/creamLamp.jpg");
-}
-
-#lamps #africaModern{
-    background-image: url("../Images/Lamps/tallLamp.jpg");
-}
-
-#lamps #blueking{
-    background-image: url("../Images/Lamps/navyLamp.png");
-}
-
-#sofas #grey2Seater{
-    background-image: url("../Images/Couchs/grey.jpg");
-}
-
-#sofas #black2Piece{
-    background-image: url("../Images/Couchs/leatehrblack.jpg");
-}
-
-#sofas #orangeleather{
-    background-image: url("../Images/Couchs/orangeSofa.jpg");
-}
-
-#outdoorfurniture #familyTable{
-    background-image: url("../Images/Outdoor/table.jpg");
-}
-
-#outdoorfurniture #customBench{
-    background-image: url("../Images/Outdoor/woodernBench.jpg");
-}
-
-#outdoorfurniture #swingCouch{
-    background-image: url("../Images/Outdoor/SwingCouch.jpg");
-}
-
-#beds #whiteQueenLeather{
-    background-image: url("../Images/Beds/LeatherBed.jpg");
-}
-
-#beds #blackLeather{
-    background-image: url("../Images/Beds/blackbed.jpg");
-}
-
-#beds #itailainComfort{
-    background-image: url("../Images/Beds/italianBed.jpg");
+    cursor: pointer;
 }
 
 .ProductDetailSnippet{
