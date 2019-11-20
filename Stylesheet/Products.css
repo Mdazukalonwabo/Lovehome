@@ -224,4 +224,8 @@
     #advert{
         margin: 2rem 1rem;
     }
+
+    .itemSummary{
+        background-color: blueviolet
+    }
 }

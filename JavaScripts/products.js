@@ -74,8 +74,6 @@ function getItemId(clicked_id){
 }
 
 function addItemToCart(){
-    // var selectedItem = SearchInventory(clicked_id);
-    // alert(selectedItem)
     alert('its done')
 }
 
