@@ -94,7 +94,7 @@
 
 .itemSummary .selected_item_container{
     display: grid;
-    grid-template-areas: "image image details";
+    grid-template-areas: "image image image image image image image image image image image details";
     grid-gap: 5%;
     height: 100%;
 }
@@ -108,6 +108,7 @@
 
 .itemSummary .content_holder{
     grid-area: details;
+    text-align: center;
 }
 
 #addToCartButton{

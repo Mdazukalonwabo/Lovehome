@@ -1,6 +1,6 @@
 var addedToCart = []
 var displayDiv = document.getElementsByClassName("displayCartContent");
-
+var buttonContainer = document.getElementById('itemSummary');
 
 //opening and closing of the cart 
 var CartIcon = document.getElementById("shoppingCartIcon");
@@ -55,23 +55,11 @@ function getItemId(clicked_id){
                                         +"<h1>"+selectedItem.ProuctName+"</h1>"
                                         +"<h3>Description</h3>"
                                         +"<p>"+selectedItem.ProductDescription+"</p>"
-                                        +createButton(itemDisplay)
+                                        +"<button class='button blueButton' onClick='addItemToCart()'>ADD TO cart</button>"
                                     +"</div>"
                                 +"</div>"
         document.getElementById('selectedImage').style.backgroundImage = "url("+selectedItem.backgroundImage+")";
     });
-
-    function createButton(context) {
-        var button = document.createElement("input");
-        button.type = "button";
-        button.value = "im a button";
-        context.appendChild(button);
-    }
-
-    function addItemToCart(itemToAdd){
-        addedToCart.push(SearchInventory(itemToAdd))
-        console.log(addedToCart)
-    }
 
     // search the inventory for specific code
     function SearchInventory(skucode){
@@ -85,35 +73,73 @@ function getItemId(clicked_id){
     }
 }
 
+function addItemToCart(){
+    // var selectedItem = SearchInventory(clicked_id);
+    // alert(selectedItem)
+    alert('its done')
+}
+
+
 var inventory = [
     chairs = [
-        {ProuctName : "small red valvet", ProductCode : "Ch001", ProductPrice : "15 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'redVelvet', backgroundImage: "../Images/Chairs/redvelvetChair.jpg"},
-        {ProuctName : "white metalic", ProductCode : "Ch002", ProductPrice : "12 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'whitePlastic', backgroundImage: "../Images/Chairs/whitePlasticChair.jpg"},
-        {ProuctName : "small leather", ProductCode : "Ch003", ProductPrice : "35 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'whiteLeather', backgroundImage: "../Images/Chairs/smallWhiteLeather.jpg"},
+        {ProuctName : "small red valvet", ProductCode : "Ch001", ProductPrice : 15000, 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'redVelvet', backgroundImage: "../Images/Chairs/redvelvetChair.jpg"},
+        {ProuctName : "white metalic", ProductCode : "Ch002", ProductPrice : 12000, 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'whitePlastic', backgroundImage: "../Images/Chairs/whitePlasticChair.jpg"},
+        {ProuctName : "small leather", ProductCode : "Ch003", ProductPrice : 35000, 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'whiteLeather', backgroundImage: "../Images/Chairs/smallWhiteLeather.jpg"},
     ],
     
     lamps = [
-        {ProuctName : "cream stone", ProductCode : "La001", ProductPrice : "6 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'creamStone', backgroundImage: "../Images/Lamps/creamLamp.jpg"},
-        {ProuctName : "african morden", ProductCode : "La002", ProductPrice : "10 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'africaModern', backgroundImage: "../Images/Lamps/tallLamp.jpg"},
-        {ProuctName : "blue king", ProductCode : "La003", ProductPrice : "9 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'blueking', backgroundImage: "../Images/Lamps/navyLamp.png"},
+        {ProuctName : "cream stone", ProductCode : "La001", ProductPrice : "6 000", 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'creamStone', backgroundImage: "../Images/Lamps/creamLamp.jpg"},
+        {ProuctName : "african morden", ProductCode : "La002", ProductPrice : "10 000", 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'africaModern', backgroundImage: "../Images/Lamps/tallLamp.jpg"},
+        {ProuctName : "blue king", ProductCode : "La003", ProductPrice : "9 000", 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'blueking', backgroundImage: "../Images/Lamps/navyLamp.png"},
     ],
     
     sofa =[
-        {ProuctName : "2 seat grey", ProductCode : "So001", ProductPrice : "25 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'grey2Seater', backgroundImage: "../Images/Couchs/grey.jpg"},
-        {ProuctName : "black leather", ProductCode : "Sa002", ProductPrice : "75 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'black2Piece', backgroundImage: "../Images/Couchs/leatehrblack.jpg"},
-        {ProuctName : "four seater orange", ProductCode : "So003", ProductPrice : "15 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'orangeleather', backgroundImage: "../Images/Couchs/orangeSofa.jpg"},
+        {ProuctName : "2 seat grey", ProductCode : "So001", ProductPrice : 25000, 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'grey2Seater', backgroundImage: "../Images/Couchs/grey.jpg"},
+        {ProuctName : "black leather", ProductCode : "Sa002", ProductPrice : 75000, 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'black2Piece', backgroundImage: "../Images/Couchs/leatehrblack.jpg"},
+        {ProuctName : "four seater orange", ProductCode : "So003", ProductPrice : 15000, 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'orangeleather', backgroundImage: "../Images/Couchs/orangeSofa.jpg"},
+        
     ],
     
     outside = [
-        {ProuctName : "pinewood family table", ProductCode : "Ou001", ProductPrice : "45 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'familyTable', backgroundImage: "../Images/Outdoor/table.jpg"},
-        {ProuctName : "brown custom bench", ProductCode : "Ou002", ProductPrice : "35 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'customBench', backgroundImage: "../Images/Outdoor/woodernBench.jpg"},
-        {ProuctName : "custom sofa swing", ProductCode : "Ou003", ProductPrice : "75 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'swingCouch', backgroundImage: "../Images/Outdoor/SwingCouch.jpg"},
+        {ProuctName : "pinewood family table", ProductCode : "Ou001", ProductPrice : 45000, 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'familyTable', backgroundImage: "../Images/Outdoor/table.jpg"},
+        {ProuctName : "brown custom bench", ProductCode : "Ou002", ProductPrice : 35000, 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'customBench', backgroundImage: "../Images/Outdoor/woodernBench.jpg"},
+        {ProuctName : "custom sofa swing", ProductCode : "Ou003", ProductPrice : 75000, 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'swingCouch', backgroundImage: "../Images/Outdoor/SwingCouch.jpg"},
     ],
     
     beds = [
-        {ProuctName : "black leather queen", ProductCode : "Be001", ProductPrice : "55 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'whiteQueenLeather', backgroundImage: "../Images/Beds/LeatherBed.jpg"},
-        {ProuctName : "king sweet black leather", ProductCode : "Be002", ProductPrice : "105 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'blackLeather', backgroundImage: "../Images/Beds/blackbed.jpg"},
-        {ProuctName : "white italian comfort", ProductCode : "Be003", ProductPrice : "95 000", ProductDescription : "dsijdfsdjfojsdfpoj", divId:'itailainComfort', backgroundImage: "../Images/Beds/italianBed.jpg"},
+        {ProuctName : "black leather queen", ProductCode : "Be001", ProductPrice : 55000, 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'whiteQueenLeather', backgroundImage: "../Images/Beds/LeatherBed.jpg"},
+        {ProuctName : "king sweet black leather", ProductCode : "Be002", ProductPrice : 105000, 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        divId:'blackLeather', backgroundImage: "../Images/Beds/blackbed.jpg"},
+        {ProuctName : "white italian comfort", ProductCode : "Be003", ProductPrice : 95000, 
+        ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        divId:'itailainComfort', backgroundImage: "../Images/Beds/italianBed.jpg"},
     ],
 ];
 
