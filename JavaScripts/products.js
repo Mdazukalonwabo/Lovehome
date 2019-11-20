@@ -48,33 +48,36 @@ function getItemId(clicked_id){
     $(".threecols div").click(function(){
         item.style.display = "block";
         const itemDisplay = document.getElementById('itemSummary');
-        var selectedItem = SearchInventory(clicked_id)
+        var selectedItem = SearchInventory("divId", clicked_id)
         itemDisplay.innerHTML = "<div class='selected_item_container'>"
                                     +"<div id='selectedImage'></div>"
                                     +"<div class='content_holder'>"
                                         +"<h1>"+selectedItem.ProuctName+"</h1>"
                                         +"<h3>Description</h3>"
                                         +"<p>"+selectedItem.ProductDescription+"</p>"
-                                        +"<button class='button blueButton' onClick='addItemToCart()'>ADD TO cart</button>"
+                                        +"<button id='"+selectedItem.ProductCode+"' class='button blueButton' onClick='addItemToCart(this.id)'>ADD TO cart</button>"
                                     +"</div>"
                                 +"</div>"
         document.getElementById('selectedImage').style.backgroundImage = "url("+selectedItem.backgroundImage+")";
     });
+}
 
-    // search the inventory for specific code
-    function SearchInventory(skucode){
-        var x = 0
-        while(x<inventory.length){
-            if(inventory[x].find(inventory => inventory.divId === skucode)){
-                return inventory[x].find(inventory => inventory.divId === skucode)
-            }
-            x++;
+// search the inventory for specific code
+function SearchInventory(SearchBy, skucode){
+    var x = 0;
+    
+    while(x<inventory.length){
+        if(inventory[x].find(inventory => inventory[SearchBy] === skucode)){
+            return inventory[x].find(inventory => inventory[SearchBy] === skucode)
         }
+        x++;
     }
 }
 
-function addItemToCart(){
-    alert('its done')
+
+function addItemToCart(clicked_id){
+    var ii = SearchInventory("ProductCode", clicked_id)
+    console.log(ii);
 }
 
 
@@ -92,13 +95,13 @@ var inventory = [
     ],
     
     lamps = [
-        {ProuctName : "cream stone", ProductCode : "La001", ProductPrice : "6 000", 
+        {ProuctName : "cream stone", ProductCode : "La001", ProductPrice : 6000, 
         ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
         divId:'creamStone', backgroundImage: "../Images/Lamps/creamLamp.jpg"},
-        {ProuctName : "african morden", ProductCode : "La002", ProductPrice : "10 000", 
+        {ProuctName : "african morden", ProductCode : "La002", ProductPrice : 10000, 
         ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
         divId:'africaModern', backgroundImage: "../Images/Lamps/tallLamp.jpg"},
-        {ProuctName : "blue king", ProductCode : "La003", ProductPrice : "9 000", 
+        {ProuctName : "blue king", ProductCode : "La003", ProductPrice : 9000, 
         ProductDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
         divId:'blueking', backgroundImage: "../Images/Lamps/navyLamp.png"},
     ],
