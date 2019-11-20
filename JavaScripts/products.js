@@ -1,4 +1,4 @@
-var addedToCart = []
+var Cart = []
 var displayDiv = document.getElementsByClassName("displayCartContent");
 var buttonContainer = document.getElementById('itemSummary');
 
@@ -76,8 +76,8 @@ function SearchInventory(SearchBy, skucode){
 
 
 function addItemToCart(clicked_id){
-    var ii = SearchInventory("ProductCode", clicked_id)
-    console.log(ii);
+    var ii = SearchInventory("ProductCode", clicked_id);
+    Cart.push(ii);
 }
 
 
