@@ -51,6 +51,13 @@
     display: none;
 }
 
+#CartContainer .displayCartContent{
+    height: 80rem;
+    overflow:scroll;
+    
+}
+
+
 #CartContainer .Cart {
    padding: 100px;
    text-transform: uppercase; 
@@ -76,6 +83,12 @@
     text-transform: uppercase;
     color: orange;
 }
+
+#CartContainer .cartThumbnail{
+    width: 20rem;
+    height: 20rem;
+}
+
 
 #CartContainer .Cart p{
     color: white;

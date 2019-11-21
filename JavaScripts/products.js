@@ -1,5 +1,16 @@
+// if(document.readyState == 'loading'){
+//     document.addEventListener('DOMContentLoaded', ready)
+// }
+// else{
+//     ready()
+// }
+
+// function ready(){
+    
+// }
+
 var Cart = []
-var displayDiv = document.getElementsByClassName("displayCartContent");
+var displayDiv = document.getElementById("displayCartContent");
 var buttonContainer = document.getElementById('itemSummary');
 
 //opening and closing of the cart 
@@ -48,7 +59,7 @@ function getItemId(clicked_id){
     $(".threecols div").click(function(){
         item.style.display = "block";
         const itemDisplay = document.getElementById('itemSummary');
-        var selectedItem = SearchInventory("divId", clicked_id)
+        var selectedItem = SearchInventory(inventory,"divId", clicked_id)
         itemDisplay.innerHTML = "<div class='selected_item_container'>"
                                     +"<div id='selectedImage'></div>"
                                     +"<div class='content_holder'>"
@@ -63,12 +74,12 @@ function getItemId(clicked_id){
 }
 
 // search the inventory for specific code
-function SearchInventory(SearchBy, skucode){
+function SearchInventory(listToLookIn,SearchBy, skucode){
     var x = 0;
-    
-    while(x<inventory.length){
-        if(inventory[x].find(inventory => inventory[SearchBy] === skucode)){
-            return inventory[x].find(inventory => inventory[SearchBy] === skucode)
+
+    while(x<listToLookIn.length){
+        if(listToLookIn[x].find(listToLookIn => listToLookIn[SearchBy] === skucode)){
+            return listToLookIn[x].find(listToLookIn => listToLookIn[SearchBy] === skucode)
         }
         x++;
     }
@@ -76,8 +87,29 @@ function SearchInventory(SearchBy, skucode){
 
 
 function addItemToCart(clicked_id){
-    var ii = SearchInventory("ProductCode", clicked_id);
-    Cart.push(ii);
+    var itemDict = SearchInventory(inventory, "ProductCode", clicked_id);
+    Cart.push(itemDict);
+    displayDiv.innerHTML += "<div><img src = '"+itemDict.backgroundImage+"' alt='"+itemDict.divId+"' class='cartThumbnail'/>"
+                        +"<button id='"+itemDict.ProductCode+"' class='btn-remove' onClick='removeItemFromCart(this.id)'>Hello</button"
+                        +"</div>";  
+}
+
+function removeItemFromCart(clicked_id){
+    console.log('im here')
+    var removeItemButton = document.getElementsByClassName('btn-remove');
+    for(var i = 0; i< removeItemButton.length; i++){
+        var button = removeItemButton[i];
+        button.addEventListener('click', function(event){
+            var buttonClicked = event.target;
+            console.log('button clicked')
+            buttonClicked.parentElement.remove()
+        })
+    }
+    console.log(SearchInventory(Cart, "ProductCode",clicked_id))
+}
+
+function updateCartTotal(){
+
 }
 
 
